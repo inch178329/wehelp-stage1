@@ -6,30 +6,12 @@
     <meta http-equiv="refresh" content="0; url=./week1/index.html" />
 
     <title>Redirecting to Week1...</title>
-    <meta name="description" content="Redirecting to Week1 project page." />
 
-    <!-- 如果瀏覽器太舊第六行跑不動就跑下面這個 -->
-    <script>
-      setTimeout(() => {
-        window.location.href = "./week1/index.html";
-      }, 1000);
-    </script>
-
-    <style>
-      body {
-        font-family: "Noto Sans TC", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #0d1117;
-        color: #c9d1d9;
-        flex-direction: column;
-      }
-      a {
-        color: #58a6ff;
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h2>Redirecting to Week 1...</h2>
@@ -37,5 +19,12 @@
       如果沒有自動跳轉，
       <a href="./week1/index.html">請點此前往 Week1 頁面</a>。
     </p>
+
+    <!-- 如果瀏覽器太舊第六行跑不動就跑下面這個js的自動跳轉方法 -->
+    <script>
+      setTimeout(function () {
+        window.location.href = "./week1/index.html";
+      }, 3000);
+    </script>
   </body>
 </html>

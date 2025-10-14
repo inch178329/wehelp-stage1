@@ -1,0 +1,17 @@
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e2a38;
+  color: #c9d1d9;
+  flex-direction: column;
+}
+a {
+  color: rgb(164, 116, 84);
+}
+
+a:hover {
+  color: rgb(238, 216, 183);
+}
