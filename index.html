@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="0; url=./week1/index.html" />
+
+    <title>Redirecting to Week1...</title>
+    <meta name="description" content="Redirecting to Week1 project page." />
+
+    <!-- 如果瀏覽器太舊第六行跑不動就跑下面這個 -->
+    <script>
+      setTimeout(() => {
+        window.location.href = "./week1/index.html";
+      }, 1000);
+    </script>
+
+    <style>
+      body {
+        font-family: "Noto Sans TC", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #0d1117;
+        color: #c9d1d9;
+        flex-direction: column;
+      }
+      a {
+        color: #58a6ff;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Redirecting to Week 1...</h2>
+    <p>
+      如果沒有自動跳轉，
+      <a href="./week1/index.html">請點此前往 Week1 頁面</a>。
+    </p>
+  </body>
+</html>
