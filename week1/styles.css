@@ -24,3 +24,18 @@ ol,
 li {
   font-family: "Open Sans", sans-serif;
 }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding:0 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
