@@ -11,6 +11,7 @@ h4,
 h5,
 h6 {
   font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
 }
 
 p,
@@ -23,6 +24,7 @@ ul,
 ol,
 li {
   font-family: "Open Sans", sans-serif;
+  font-size: 20px;
 }
 
 .navbar {
@@ -38,4 +40,12 @@ li {
   list-style: none;
   display: flex;
   gap: 20px;
+}
+
+.hero{
+  background-color: #d8ebf9;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
