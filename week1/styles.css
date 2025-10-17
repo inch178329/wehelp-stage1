@@ -58,17 +58,51 @@ body {
   width: 100%;
 }
 
+
 .container {
   width: 1200px;
   margin: 20px auto;
 }
 
 .promotions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  gap: 20px;
+
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "A A"
+    "B C";
   font-family: "Open Sans", sans-serif;
 }
+
+.p1 {
+  grid-area: A;
+  background-color: #e9f3f9;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.p2 {
+  grid-area: B;
+  background-color: #e9f3f9;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.p3 {
+  grid-area: C;
+  background-color: #e9f3f9;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
 
 .promotion {
   background-color: #e9f3f9;
@@ -78,32 +112,19 @@ body {
   font-weight: bold;
 }
 
-.pro2n3 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  padding-bottom: 10px;
-}
 
 .proImg {
   width: 80px;
   height: 50px;
 }
 
-#pro2 {
-  width: calc(1200px / 3 * 2);
-}
-
-#pro3 {
-  width: calc(1200px / 3);
-}
 
 .gallery {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 200px 200px;
   gap: 20px; /* 欄/列間距 */
+  margin-top: 20px;
 }
 
 .card {
@@ -132,4 +153,34 @@ body {
   top: 0;
   right: 0;
   width: 30px;
+}
+
+@media (max-width: 1200px) and (min-width: 601px) {
+  body {
+    max-width: 1200px;
+  }
+  .container {
+    width: 90vw; /* 佔 90% 螢幕寬 */
+    max-width: 1200px;
+  }
+
+  /* 外層：兩欄 */
+  .promotions {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "A B"
+      "C C";
+  }
+
+
+  /* 內容方塊：4 欄等高，最後一排僅 2 格且各 50% */
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px; /* 等高 */
+    gap: 10px;
+  }
+  .gallery .card:nth-last-child(2),
+  .gallery .card:last-child {
+    grid-column: span 2;
+  }
 }
