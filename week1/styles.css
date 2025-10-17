@@ -141,7 +141,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
   font-size: 20px;
 }
 
@@ -155,7 +155,7 @@ ul,
 ol,
 li {
   font-size: 20px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 body {
@@ -175,6 +175,33 @@ body {
 .logo {
   font-size: 20px;
   font-weight: bold;
+}
+
+.burger {
+  display: none;
+}
+
+input {
+  display: none;
+}
+
+.menu-panel {
+  position: static;
+  height: auto;
+  width: auto;
+  max-width: none;
+  transform: none;
+  box-shadow: none;
+  padding: 0;
+}
+.menu-panel .close {
+  display: none;
+}
+.menu-panel ul {
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar ul {
@@ -206,7 +233,7 @@ body {
   font-weight: bold;
   width: 100vw;
   margin: 0px auto;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .container {
@@ -334,37 +361,85 @@ body {
     width: 90vw;
   }
 
-  /* 導覽列：顯示漢堡，隱藏桌機選單，漢堡與標題垂直置中 */
-  .nav-desktop {
-    display: none;
-  }
   .burger {
     display: block;
+    cursor: pointer;
+  }
+  .navbar ul {
+    display: none;
   }
 
-  /* Bars：三個 bar 直排單欄、全寬 */
+  
+  
+  .menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 75vw; /* 右側抽屜寬度，可依圖調  */
+    max-width: 360px;
+    background: #fff;
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.18);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding: 60px 20px 20px; /* 留出上方放關閉鈕 */
+    z-index: 1000;
+    display: block; /* 以 block + 直向清單 */
+  }
+  .menu-panel ul {
+    display: block;
+  }
+  .menu-panel li {
+    border-bottom: 1px solid #efefef;
+  }
+  .menu-panel a {
+    display: block;
+    line-height: 50px;
+    font-size: 18px;
+    color: #5d5d5d;
+    cursor: pointer;
+  }
+  .menu-panel a:hover {
+    background: #5d5d5d;
+    color: #fff;
+  }
+  
+  .burger img {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+  }
+  
+  .menu-panel .close {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  .close img {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+  }
+
+  /* 勾選時開啟抽屜 */
+  #switch:checked ~ .menu-panel {
+    transform: translateX(0);
+  }
+
   .promotions {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 50px;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
   }
 
-  /* 讓內層也直排展開 */
-  .pro2n3 {
-    display: contents; /* 攤平，讓 p2、p3 依序成為外層直排的第二與第三個 */
-  }
-
-  /* Content Blocks：10 個卡片直排、全寬 */
   .gallery {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-  }
-
-  /* 圖片維持比例（不拉伸），依寬度縮放 */
-  .dog {
-    height: auto;
-    object-fit: contain;
   }
 }
