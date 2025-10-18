@@ -244,11 +244,11 @@ input {
 .promotions {
   display: grid;
   gap: 20px;
-
+  
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
-    "A A"
-    "B C";
+  "A A"
+  "B C";
   font-family: "Open Sans", sans-serif;
 }
 
@@ -314,10 +314,14 @@ input {
 .title {
   position: absolute;
   background-color: rgba(144, 217, 238, 0.5);
+  height: 35px;
   bottom: 0;
   width: 100%;
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .star {
