@@ -160,7 +160,7 @@ li {
 
 body {
   max-width: 1920px;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -231,7 +231,7 @@ input {
   justify-content: center;
   font-size: 40px;
   font-weight: bold;
-  width: 100vw;
+  width: 100%;
   margin: 0px auto;
   font-family: "Noto Sans TC", sans-serif;
 }
@@ -260,6 +260,7 @@ input {
   display: flex;
   align-items: center;
   font-weight: bold;
+  overflow: hidden;
 }
 
 .p2 {
@@ -269,6 +270,7 @@ input {
   display: flex;
   align-items: center;
   font-weight: bold;
+  overflow: hidden;
 }
 
 .p3 {
@@ -278,11 +280,12 @@ input {
   display: flex;
   align-items: center;
   font-weight: bold;
+  overflow: hidden;
 }
 
 .promotion {
   background-color: #e9f3f9;
-  height: 50px;
+  height: 80px;
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -290,7 +293,7 @@ input {
 
 .proImg {
   width: 80px;
-  height: 50px;
+  object-fit: cover;
 }
 
 .gallery {
@@ -304,21 +307,28 @@ input {
 .card {
   text-align: center;
   position: relative; /* 讓內部的絕對定位參照這個容器 */
+  overflow: hidden;
 }
 
 .dog {
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: cover;
+  object-position: 50% 15%;
 }
 
 .title {
   position: absolute;
   background-color: rgba(144, 217, 238, 0.5);
+  height: 35px;
   bottom: 0;
   width: 100%;
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .star {
@@ -336,6 +346,10 @@ input {
     max-width: 1200px;
   }
 
+  .navbar {
+    padding: 12px 10px;
+  }
+
   /* 外層：兩欄 */
   .promotions {
     grid-template-columns: 1fr 1fr;
@@ -348,7 +362,7 @@ input {
   .gallery {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 200px; /* 等高 */
-    gap: 10px;
+    gap: 20px;
   }
   .gallery .card:nth-last-child(2),
   .gallery .card:last-child {
@@ -360,17 +374,19 @@ input {
   .container {
     width: 90vw;
   }
-
   .burger {
     display: block;
     cursor: pointer;
   }
+
+  .navbar {
+    padding: 12px 5px;
+  }
+
   .navbar ul {
     display: none;
   }
 
-  
-  
   .menu-panel {
     position: fixed;
     top: 0;
@@ -403,14 +419,12 @@ input {
     background: #5d5d5d;
     color: #fff;
   }
-  
+
   .burger img {
-    position: absolute;
-    top: 12px;
-    right: 12px;
+    position: static;
     width: 20px;
   }
-  
+
   .menu-panel .close {
     cursor: pointer;
     display: block;
@@ -431,6 +445,11 @@ input {
     transform: translateX(0);
   }
 
+  .hero {
+    text-align: center; /* 讓換行後仍置中 */
+    padding: 0 16px; /* 小小內距避免貼邊 */
+  }
+
   .promotions {
     display: flex;
     flex-direction: column;
@@ -440,6 +459,6 @@ input {
   .gallery {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 }
