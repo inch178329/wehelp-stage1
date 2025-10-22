@@ -1,0 +1,1 @@
+print("Hello, WeHelp Week 2!")
