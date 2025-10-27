@@ -1,0 +1,464 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 全域邊界盒模型設定 */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* 全域設定字型，用逗號and連接起來 */
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 20px;
+}
+
+p,
+a,
+input,
+label,
+textarea,
+span,
+ul,
+ol,
+li {
+  font-size: 20px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 40px; /* 增加內距，恢復空間感 */
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.burger {
+  display: none;
+}
+
+input {
+  display: none;
+}
+
+.menu-panel {
+  position: static;
+  height: auto;
+  width: auto;
+  max-width: none;
+  transform: none;
+  box-shadow: none;
+  padding: 0;
+}
+.menu-panel .close {
+  display: none;
+}
+.menu-panel ul {
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #1e90ff;
+}
+
+.hero {
+  background-color: #d8ebf9;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100%;
+  margin: 0px auto;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  margin: 20px auto;
+}
+
+.promotions {
+  display: grid;
+  gap: 20px;
+
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "A A"
+    "B C";
+  font-family: "Open Sans", sans-serif;
+}
+
+.p1 {
+  grid-area: A;
+  background-color: #e9f3f9;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.p2 {
+  grid-area: B;
+  background-color: #e9f3f9;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.p3 {
+  grid-area: C;
+  background-color: #e9f3f9;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.promotion {
+  background-color: #e9f3f9;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.proImg {
+  width: 80px;
+  object-fit: cover;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  gap: 20px; /* 欄/列間距 */
+  margin-top: 20px;
+}
+
+.card {
+  text-align: center;
+  position: relative; /* 讓內部的絕對定位參照這個容器 */
+  overflow: hidden;
+}
+
+.dog {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+
+.title {
+  position: absolute;
+  background-color: rgba(144, 217, 238, 0.5);
+  height: 35px;
+  bottom: 0;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  opacity: 0.5;
+}
+
+@media (max-width: 1200px) and (min-width: 601px) {
+  .container {
+    width: 90vw; /* 佔 90% 螢幕寬 */
+    max-width: 1200px;
+  }
+
+  .navbar {
+    padding: 12px 10px;
+  }
+
+  /* 外層：兩欄 */
+  .promotions {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "A B"
+      "C C";
+  }
+
+  /* 內容方塊：4 欄等高，最後一排僅 2 格且各 50% */
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px; /* 等高 */
+    gap: 20px;
+  }
+  .gallery .card:nth-last-child(2),
+  .gallery .card:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 361px) {
+  .container {
+    width: 90vw;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar {
+    padding: 12px 5px;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 75vw; /* 右側抽屜寬度，可依圖調  */
+    max-width: 360px;
+    background: #fff;
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.18);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding: 60px 20px 20px; /* 留出上方放關閉鈕 */
+    z-index: 1000;
+    display: block; /* 以 block + 直向清單 */
+  }
+  .menu-panel ul {
+    display: block;
+  }
+  .menu-panel li {
+    border-bottom: 1px solid #efefef;
+  }
+  .menu-panel a {
+    display: block;
+    line-height: 50px;
+    font-size: 18px;
+    color: #5d5d5d;
+    cursor: pointer;
+  }
+  .menu-panel a:hover {
+    background: #5d5d5d;
+    color: #fff;
+  }
+
+  .burger img {
+    position: static;
+    width: 20px;
+  }
+
+  .menu-panel .close {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  .close img {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+  }
+
+  /* 勾選時開啟抽屜 */
+  #switch:checked ~ .menu-panel {
+    transform: translateX(0);
+  }
+
+  .hero {
+    text-align: center; /* 讓換行後仍置中 */
+    padding: 0 16px; /* 小小內距避免貼邊 */
+  }
+
+  .promotions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
