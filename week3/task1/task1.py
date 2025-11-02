@@ -12,7 +12,7 @@ def getHotelData(src):
 def getDistrictName(address):
     if "區" in address:
         index_of_district = address.find("區")
-        return address[index_of_district - 2 : index_of_district + 1]
+        return address[ 3 : 6 ]
 
 dataZh = getHotelData(hotelSrcZh)
 dataEn = getHotelData(hotelSrcEn)
