@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login for Week4 Website</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="..\static\styles.css" />
+  </head>
+
+  <body>
+    <div class="header">歡迎光臨，請輸入信箱密碼</div>
+    <main class="wrap layout">
+      <!-- 登入系統 -->
+      <section class="function">
+        <div class="title">登入系統</div>
+        <form class="login" action="/login" method="post" novalidate>
+          <div class="field">
+            <label for="email">信箱</label>
+            <input id="email" name="email" type="email" placeholder="請輸入信箱" />
+          </div>
+          <div class="field">
+            <label for="pwd">密碼</label>
+            <input id="pwd" name="password" type="password" placeholder="請輸入密碼" />
+          </div>
+          <div class="field checkbox">
+            <label for="agree">同意條款 <input id="agree" type="checkbox" /></label>
+          </div>
+          <button class="btn" type="submit" id="submit">登入</button>
+        </form>
+      </section>
+
+      <!-- 取得旅館資訊 -->
+      <section class="function">
+        <div class="title">取得旅館資訊</div>
+        <form class="get-hotel" method="get">
+          <div class="field">
+            <label for="hid">編號</label>
+            <input id="hid" name="id" type="text" placeholder="請輸入正整數" />
+          </div>
+          <button class="btn" type="submit" id="search">取得</button>
+        </form>
+      </section>
+    </main>
+    <script src="..\static\all.js"></script>
+  </body>
+</html>
