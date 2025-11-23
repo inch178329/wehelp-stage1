@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login for Week6 Website</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="..\static\styles.css" />
+  </head>
+
+  <body>
+    <div class="header">歡迎光臨，請註冊登入系統</div>
+    <main class="layout">
+      <!-- 註冊系統 -->
+      <section class="function">
+        <div class="title">註冊帳號</div>
+        <form class="signup" action="/signup" method="post" novalidate>
+          <div class="field">
+            <label for="signup-name">姓名</label>
+            <input
+              id="signup-name"
+              name="name"
+              type="text"
+              placeholder="請輸入姓名"
+            />
+          </div>
+          <div class="field">
+            <label for="signup-email">信箱</label>
+            <input
+              id="signup-email"
+              name="email"
+              type="email"
+              placeholder="請輸入信箱"
+            />
+          </div>
+          <div class="field">
+            <label for="signup-password">密碼</label>
+            <input
+              id="signup-password"
+              name="password"
+              type="password"
+              placeholder="請輸入密碼"
+            />
+          </div>
+          <button class="btn" type="submit">註冊</button>
+        </form>
+      </section>
+
+      <!-- 登入系統 -->
+      <section class="function">
+        <div class="title">登入系統</div>
+        <form class="login" action="/login" method="post" novalidate>
+          <div class="field">
+            <label for="email">信箱</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="請輸入信箱"
+            />
+          </div>
+          <div class="field">
+            <label for="pwd">密碼</label>
+            <input
+              id="pwd"
+              name="password"
+              type="password"
+              placeholder="請輸入密碼"
+            />
+          </div>
+          <div class="field checkbox">
+            <label for="agree"
+              >同意條款 <input id="agree" type="checkbox"
+            /></label>
+          </div>
+          <button class="btn" type="submit" id="submit">登入</button>
+        </form>
+      </section>
+    </main>
+    <script src="..\static\all.js"></script>
+  </body>
+</html>
